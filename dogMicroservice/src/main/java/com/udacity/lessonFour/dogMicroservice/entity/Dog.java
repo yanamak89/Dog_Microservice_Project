@@ -12,7 +12,6 @@ import javax.persistence.Id;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @ToString
 @Entity
 public class Dog {
@@ -26,7 +25,7 @@ public class Dog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private int name;
+    private String name;
     private String breed;
     private String origin;
 
