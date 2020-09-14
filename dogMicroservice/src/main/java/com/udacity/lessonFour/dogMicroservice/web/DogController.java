@@ -13,10 +13,11 @@ import java.util.List;
 
 @RestController
 public class DogController {
-    private DogService dogService;
 
-    public void setDogService(DogService dogService){
-        this.dogService = dogService;
+    private final DogService dogService;
+
+    public DogController(DogService dogService){
+        this.dogService=dogService;
     }
 
     @GetMapping("/dogs")
