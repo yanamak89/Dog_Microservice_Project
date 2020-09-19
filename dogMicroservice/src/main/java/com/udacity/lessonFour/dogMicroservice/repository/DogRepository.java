@@ -3,11 +3,11 @@ package com.udacity.lessonFour.dogMicroservice.repository;
 import com.udacity.lessonFour.dogMicroservice.entity.Dog;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@RepositoryRestResource
+@Repository
 public interface DogRepository extends CrudRepository<Dog, Long> {
     @Query("select d.id, d.breed from Dog d where d.id=:id")
     String findBreedById(Long id);
